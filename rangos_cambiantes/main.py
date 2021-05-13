@@ -8,15 +8,11 @@ def run():
     limite_superior = int(input('Elige un limite superior => '))
     comparacion = int(input('Elige un numero  => '))
 
-    for numero in range(limite_inferior , limite_superior + 1):
-        
-        if comparacion > limite_inferior and comparacion < limite_superior:
-            if comparacion == numero:
-                print(comparacion)
-        else:
-            comparacion = int(input('elige otro numero => '))
-            if comparacion == numero:
-                print(comparacion)
+    while comparacion < limite_inferior or comparacion > limite_superior:
+        print('el numero' , str(comparacion), 'esta fuera de rango ' )
+        comparacion = int(input('Ingresa otro numero => '))
+
+    print('el numero ', str(comparacion), 'esta dentro del rango' )    
                 
         
 if __name__ == '__main__':
